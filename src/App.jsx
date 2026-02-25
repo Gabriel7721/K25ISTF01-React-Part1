@@ -146,6 +146,9 @@ const App = () => {
 
         <Couting onClick={handleClick} count={count} />
         <Couting onClick={handleClick} count={count} />
+
+        <h3>Bootstrap</h3>
+        <button className="btn btn-primary">Button</button>
       </section>
     </div>
   );
