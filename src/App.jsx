@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import MyButton, {
   MyButtonPrimary,
@@ -8,8 +9,17 @@ import MyData from "./components/04.display-data/MyData";
 import CheckLogin from "./components/05.conditional/CheckLogin";
 import LoginForm from "./components/05.conditional/LoginForm";
 import ShoppingList from "./components/06.Lists/ShoppingList";
+import EventOnclick from "./components/07.Event-Response/EventOnclick";
+import Couting from "./components/08.Update State/Couting";
 
 const App = () => {
+  // Top-Level Component
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
   return (
     <div>
       <h1>React Basics</h1>
@@ -128,6 +138,14 @@ const App = () => {
 
         <h3>Lists Rendering</h3>
         <ShoppingList />
+
+        <h3>Event Response</h3>
+        <EventOnclick />
+
+        <h3>Sharing state</h3>
+
+        <Couting onClick={handleClick} count={count} />
+        <Couting onClick={handleClick} count={count} />
       </section>
     </div>
   );
