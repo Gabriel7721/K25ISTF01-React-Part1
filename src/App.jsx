@@ -1,9 +1,13 @@
+import "./App.css";
 import MyButton, {
   MyButtonPrimary,
   MyButtonWarning,
 } from "./components/01.create-and-nest-components/MyButton";
-import "./App.css";
 import MyAvatar from "./components/03.adding-style/MyAvatar";
+import MyData from "./components/04.display-data/MyData";
+import CheckLogin from "./components/05.conditional/CheckLogin";
+import LoginForm from "./components/05.conditional/LoginForm";
+import ShoppingList from "./components/06.Lists/ShoppingList";
 
 const App = () => {
   return (
@@ -109,12 +113,21 @@ const App = () => {
               <li>
                 Với CSS Module, ta tạo file Component.module.css, import như một
                 module: import styles from "./Component.module.css", và sử dụng
-                dưới dạng styles.container. Cách này giúp cô lập phạm vi style và
-                tránh xung đột tên class.
+                dưới dạng styles.container. Cách này giúp cô lập phạm vi style
+                và tránh xung đột tên class.
               </li>
             </ol>
           </li>
         </ul>
+
+        <h3>Display Data</h3>
+        <MyData />
+
+        <h3>Conditional Render</h3>
+        <CheckLogin />
+
+        <h3>Lists Rendering</h3>
+        <ShoppingList />
       </section>
     </div>
   );

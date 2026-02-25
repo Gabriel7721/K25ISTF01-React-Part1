@@ -8,7 +8,7 @@ const MyAvatar = () => {
     <div>
       <figure>
         <img
-          className={styles.myAvatar}
+          className={styles.herAvatar}
           src={avtPublic}
           alt="My cat avatar from /public"
         />
